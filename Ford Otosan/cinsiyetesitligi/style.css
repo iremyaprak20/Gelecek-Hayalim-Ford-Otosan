@@ -1,0 +1,128 @@
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+    background-image: url(image/bg.png);
+    background-size: cover; 
+    background-position: center;
+    background-blend-mode: multiply; 
+}
+
+
+
+.quiz-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+    animation: fadeIn 0.7s ease-in-out;
+    z-index: 1; 
+}
+
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #007bff;
+    transform: scale(1.2);
+}
+
+
+button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+#result {
+    display: none; 
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    border: 2px solid #218838; 
+    color: #218838; 
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#result.show {
+    display: block;
+    animation: pop 0.5s ease;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
